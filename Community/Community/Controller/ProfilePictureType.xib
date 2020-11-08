@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfilePictureType" customModule="Community" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jg7-Pe-SKo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-Vs-kTD">
+                    <rect key="frame" x="33.5" y="340.5" width="347" height="215"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4O-gn-Yu2">
+                            <rect key="frame" x="297" y="10" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="9Jk-Er-Jtc"/>
+                                <constraint firstAttribute="width" constant="40" id="Rfb-2i-AEY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <state key="normal" backgroundImage="closeButton"/>
+                            <connections>
+                                <action selector="closePressed:" destination="-1" eventType="touchUpInside" id="dg9-W6-OP9"/>
+                                <action selector="uploadPhotoPressed:" destination="-1" eventType="touchUpInside" id="vrV-UU-zu2"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="75J-OD-KPq">
+                            <rect key="frame" x="73.5" y="48.5" width="200" height="118"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-6m-Ei6">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="42"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <state key="normal" title="Upload photo"/>
+                                    <connections>
+                                        <action selector="uploadPhotoPressed:" destination="-1" eventType="touchUpInside" id="XiS-Xj-Vx0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-cy-vUd">
+                                    <rect key="frame" x="0.0" y="76" width="200" height="42"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <state key="normal" title="Choose an Avatar"/>
+                                    <connections>
+                                        <action selector="ChooseAvatarPressed:" destination="-1" eventType="touchUpInside" id="qF7-DB-yvM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MFF-Vs-kTD" secondAttribute="height" multiplier="347:215" id="8h4-BR-AeC"/>
+                        <constraint firstItem="p4O-gn-Yu2" firstAttribute="top" secondItem="MFF-Vs-kTD" secondAttribute="top" constant="10" id="FoB-Nj-JaY"/>
+                        <constraint firstItem="75J-OD-KPq" firstAttribute="centerY" secondItem="MFF-Vs-kTD" secondAttribute="centerY" id="GW9-Gb-xcg"/>
+                        <constraint firstAttribute="trailing" secondItem="p4O-gn-Yu2" secondAttribute="trailing" constant="10" id="JO6-JD-kpn"/>
+                        <constraint firstAttribute="width" constant="347" id="OTH-Ed-Nr5"/>
+                        <constraint firstItem="75J-OD-KPq" firstAttribute="centerX" secondItem="MFF-Vs-kTD" secondAttribute="centerX" id="mAF-aM-f6p"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="MFF-Vs-kTD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8KU-yA-AVu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jg7-Pe-SKo" secondAttribute="bottom" id="Ew2-Jr-IAt"/>
+                <constraint firstItem="jg7-Pe-SKo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LIh-BA-e6a"/>
+                <constraint firstItem="MFF-Vs-kTD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dxs-tP-dqU"/>
+                <constraint firstItem="jg7-Pe-SKo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gHV-fy-yH0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jg7-Pe-SKo" secondAttribute="trailing" id="xfn-RI-krl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="50.724637681159422" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+    </resources>
+</document>
